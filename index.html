@@ -123,6 +123,10 @@
 
   .app{display:grid;grid-template-columns:240px minmax(0,1fr) 300px;min-height:100vh}
 
+  /* ===== 布局修复核心 ===== */
+  .main-wrap { grid-column: 2; min-width: 0; }
+  .scrim { display: none; }
+
   /* 左侧栏 */
   .sidebar{
     position:sticky;top:0;height:100vh;padding:22px 16px;
@@ -368,7 +372,8 @@
 
   /* 右侧栏 */
   .right-rail{position:sticky;top:0;height:100vh;padding:22px 18px;overflow-y:auto;
-    border-left:1px solid var(--line);background:var(--rail-bg);transition:background .3s}
+    border-left:1px solid var(--line);background:var(--rail-bg);transition:background .3s;
+    grid-column: 3; /* 修复：固定右侧栏位置 */ }
   .rail-panel{position:relative;z-index:1;margin-bottom:18px;padding:18px}
   .rail-panel h3{font-size:.92rem;margin-bottom:12px;color:var(--text)}
   .rail-panel p{font-size:.82rem;color:var(--muted);line-height:1.6}
@@ -405,12 +410,15 @@
 
   @media (max-width:899px){
     .app{grid-template-columns:1fr}
+    .main-wrap { grid-column: 1; } /* 手机端主内容占据全部 */
     .sidebar{position:fixed;top:0;left:0;bottom:0;z-index:60;
       width:280px;max-width:86vw;transform:translateX(-100%);
       transition:transform .25s ease;background:var(--sidebar-bg);
       backdrop-filter:blur(20px)}
     .sidebar.open{transform:none}
-    .scrim{position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.5);
+    
+    /* 手机端恢复遮罩层 */
+    .scrim{display:block; position:fixed;inset:0;z-index:55;background:rgba(0,0,0,.5);
       opacity:0;pointer-events:none;transition:opacity .25s}
     .scrim.show{opacity:1;pointer-events:auto}
     
@@ -552,27 +560,31 @@
           <h2 style="font-size:1.3rem; margin-bottom: 8px;">帖子</h2>
         </div>
 
-        <!-- 帖子列表区域 -->
-        <article class="glass-soft post-card" data-title="欢迎来到 Minecraft 官方网站" data-content="Minecraft 国际服官方网站 muffin提示：挂梯子效果更佳！" data-tags="官方,安卓,Windows,Java版,基岩版,国际版" onclick="window.open('https://www.minecraft.net/', '_blank')">
-  <div class="post-cover" style="background-image: url('https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Global-Header_Image-Tile_MC-Java-Bedrock_570x321.jpg'); background-size: cover; background-position: center;"></div>
-  <div class="post-body">
-    <div class="post-byline">
-      <img class="avatar" src="http://mms2.baidu.com/it/u=3325769832,2567653956&fm=253&app=138&f=JPEG?w=1169&h=500" alt="avatar" style="object-fit:cover; object-position:center;">
-      Microsoft <span class="official-badge">官方</span> · 2026.10.19
-    </div>
-    <a class="post-title" href="https://www.minecraft.net/" target="_blank" onclick="event.stopPropagation()">欢迎来到 Minecraft 官方网站</a>
-    <p class="post-excerpt">Minecraft 国际服官方网站 muffin提示：挂梯子效果更佳！</p>
-    <div style="display:flex;gap:6px;flex-wrap:wrap">
-      <span class="cat-tag">官方</span>
-      <span class="cat-tag">安卓</span>
-      <span class="cat-tag">Windows</span>
-      <span class="cat-tag">Java版</span>
-      <span class="cat-tag">基岩版</span>
-      <span class="cat-tag">国际版</span>
-    </div>
-  </div>
-</article>
-          <!-- 这篇就是站规帖子 -->
+        <!-- ======== 修复：补全了帖子列表区域的 div ======== -->
+        <div class="post-grid" id="postList">
+          
+          <!-- 置顶帖子：官方主页 -->
+          <article class="glass-soft post-card" data-title="欢迎来到 Minecraft 官方网站" data-content="Minecraft 国际服官方网站 muffin提示：挂梯子效果更佳！" data-tags="官方,安卓,Windows,Java版,基岩版,国际版" onclick="window.open('https://www.minecraft.net/', '_blank')">
+            <div class="post-cover" style="background-image: url('https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Global-Header_Image-Tile_MC-Java-Bedrock_570x321.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="post-body">
+              <div class="post-byline">
+                <img class="avatar" src="http://mms2.baidu.com/it/u=3325769832,2567653956&fm=253&app=138&f=JPEG?w=1169&h=500" alt="avatar" style="object-fit:cover; object-position:center;">
+                Microsoft <span class="official-badge">官方</span> · 2026.10.19
+              </div>
+              <a class="post-title" href="https://www.minecraft.net/" target="_blank" onclick="event.stopPropagation()">欢迎来到 Minecraft 官方网站</a>
+              <p class="post-excerpt">Minecraft 国际服官方网站 muffin提示：挂梯子效果更佳！</p>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="cat-tag">官方</span>
+                <span class="cat-tag">安卓</span>
+                <span class="cat-tag">Windows</span>
+                <span class="cat-tag">Java版</span>
+                <span class="cat-tag">基岩版</span>
+                <span class="cat-tag">国际版</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 站规帖子 -->
           <article class="glass-soft post-card" data-title="全站发帖与社区管理规范" data-content="包含发帖格式规范、反馈流程、官方声明、免责声明以及版权说明。" data-tags="官方,闲聊" onclick="go('article-statement')">
             <div class="post-cover cat-notice">📜</div>
             <div class="post-body">
