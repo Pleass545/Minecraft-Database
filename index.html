@@ -595,6 +595,27 @@
               </div>
             </div>
           </article>
+
+          <!-- 新帖子：PCL 停止下载 -->
+          <article class="glass-soft post-card" data-title="悲报！市面上公开的MC第三方启动器停止支持 MC 本体下载！" data-content="市面上公开的MC第三方启动器停止支持 MC 本体下载！PCL2 官方确认不再提供 MC 下载功能，旧版需冻结更新；HMCL、x-minecraft-launcher 等仍可下载。" data-tags="安卓,Windows,Java版,基岩版,国际版,闲聊" onclick="go('article-pcl')">
+            <div class="post-cover cat-video">📜</div>
+            <div class="post-body">
+              <div class="post-byline">
+                <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+                muffin <span class="official-badge">官方</span> · 2026.10.20
+              </div>
+              <a class="post-title" href="javascript:void(0)" onclick="event.stopPropagation(); go('article-pcl')">悲报！市面上公开的MC第三方启动器停止支持 MC 本体下载！</a>
+              <p class="post-excerpt">市面上公开的MC第三方启动器停止支持 MC 本体下载！</p>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="cat-tag">安卓</span>
+                <span class="cat-tag">Windows</span>
+                <span class="cat-tag">Java版</span>
+                <span class="cat-tag">基岩版</span>
+                <span class="cat-tag">国际版</span>
+                <span class="cat-tag">闲聊</span>
+              </div>
+            </div>
+          </article>
         </div>
 
         <!-- 搜索无结果提示 -->
@@ -660,6 +681,61 @@
               <button class="glass-pill btn btn-primary" style="font-size: 1rem; padding: 12px 30px;" data-page="group">
                 点击加入官方交流群
               </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 帖子详情页：PCL 停止下载 ===== -->
+      <section class="page" id="page-article-pcl">
+        <div class="glass doc" style="max-width: 860px; margin: 0 auto;">
+          <div class="article-header">
+            <h1>悲报！市面上公开的MC第三方启动器停止支持 MC 本体下载！</h1>
+            <div class="post-byline" style="justify-content: center;">
+              <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+              muffin <span class="official-badge">官方</span> · 发布于 2026.10.20
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+              <span class="cat-tag">安卓</span>
+              <span class="cat-tag">Windows</span>
+              <span class="cat-tag">Java版</span>
+              <span class="cat-tag">基岩版</span>
+              <span class="cat-tag">国际版</span>
+              <span class="cat-tag">闲聊</span>
+            </div>
+          </div>
+
+          <div class="article-content">
+            <p>放结论：从今天起，你在主流第三方启动器里“一键下载 Minecraft 本体”的体验，正在被系统性地关闭。 不是某一个启动器的孤立行为，而是几乎所有公开启动器在同一时间窗口内的集体转向。更麻烦的是，连作为最后退路的国际版官网，在部分网络环境下也已经打不开了。</p>
+
+            <h2>🚨 核心悲报：PCL 即日起关闭自动下载</h2>
+            <p>PCL2 维护者 LTCatt 已在 2.99.0.0 版本的 Discussion 中确认：“为遵守相关法律法规，PCL 不再提供 MC 下载功能” ，并注明“与网易微软麻将无关”。这是官方定性，不是谣言，也不是临时故障。</p>
+            <p>同时有社区消息进一步指出：目前所有公开启动器，均即将停止支持 Minecraft 的下载功能。这意味着你接下来看到的启动器“下载”按钮消失，大概率不是 bug，而是方向。</p>
+            <p>最重要的一点：如果你现在还在用旧版 PCL2，且下载功能仍然可用——不要直接启动它让它自动更新。 旧版一旦触发自动更新到 2.99+，下载能力就没了。保住旧版的方法是：打开 PCL 可执行文件所在目录下的 PCL 文件夹，编辑 <code>Setup.ini</code>，找到 <code>SystemSystemUpdate</code> 参数，将其改为 <code>SystemSystemUpdate:3</code>；如果没有这个参数，直接新增一行。这是目前最直接的“旧版续命”手段。</p>
+
+            <h2>🖥️ 受影响启动器逐一盘点（仅限 Windows）</h2>
+            <ul>
+              <li><b>PCL2：下载功能已正式关闭。</b> 新版本不再提供 MC 本体下载入口，旧版本是唯一的存量窗口，但前提是你阻止它更新。</li>
+              <li><b>PCL:CE（社区版）：能下载，但离线登录被正版验证锁死。</b> PCL:CE 继承上游条款后，转向了强制正版验证策略：必须登录拥有 Minecraft 正版的微软账户，才能使用离线登录或第三方登录功能。也就是说，如果你没有正版，即使启动器本身还能下载本体，你也无法以离线身份进入游戏。这是比“不能下载”更隐蔽的一道门槛。</li>
+              <li><b>HTML 启动器：目前（2026.10.20）似乎一切正常。</b> 这是当前少有的下载功能未见关闭的公开启动器，但鉴于“所有公开启动器均即将停止”的大背景，建议把它当作暂时性的窗口，而不是长期稳定的方案。</li>
+            </ul>
+
+            <h2>🌐 还有一个被忽略的变量：你可能连官网都打不开</h2>
+            <p>就算你决定回到“最原始的办法”——去国际版官网手动下载，网络这一关也不一定过得去。</p>
+            <p>就 2026 年 10 月 20 日的实际情况而言：联通已经无法正常访问 Minecraft 国际版官网，移动可以正常访问。电信和广电的情况目前不明确，没有确定结论。</p>
+            <p>这不是第一次出现运营商层面的访问问题。历史上联通和移动都曾对 Mojang/Minecraft 相关域名实施过限制，且恢复时间不可预测。所以“官网手动下载”这条退路，在联通网络下当前是走不通的。</p>
+
+            <h2>🔧 现在还能怎么办</h2>
+            <p><b>第一，如果你有正版账户：</b> HMCL、x-minecraft-launcher、BlockHelm 等启动器目前仍提供从官方或第三方镜像下载 Minecraft 的能力，且对正版用户没有额外的离线限制。这是当前最干净的路径。</p>
+            <p><b>第二，如果你没有正版、且依赖离线：</b> 旧版 PCL2（阻止更新后） + 手动导入游戏核心文件，是相对可控的组合。不要轻易使用社区流传的“解除限制”修改版或 fork 版本——PCL:CE 的强制正版策略已经引发了针对性的投毒风险警告，来路不明的“无限制版”是高风险行为。</p>
+            <p><b>第三，下载源切换不是万能药。</b> 部分旧教程建议切换 BMCLAPI 或镜像源来恢复下载，但在启动器层面主动移除下载入口的前提下，换源并不能让消失的按钮重新出现。</p>
+
+            <h2>最后一句</h2>
+            <p>这不是一次普通的维护或故障。PCL2 的公告用词是“不再提供”，社区观察的用词是“均即将停止” 。如果你还有能正常下载的旧版启动器，先冻结更新；如果你打算长期玩下去，尽早把游戏文件掌握在自己手里，而不是依赖任何一个启动器的内置下载通道。</p>
+
+            <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--line); display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+              <button class="btn btn-ghost" data-page="home">返回首页</button>
+              <button class="btn btn-primary" data-page="group">加入官方交流群</button>
             </div>
           </div>
         </div>
