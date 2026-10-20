@@ -366,9 +366,7 @@
   }
   .group-btn:hover { transform: translateY(-2px); }
   .qq-btn { background: rgba(102, 204, 255, 0.15); border-color: rgba(102, 204, 255, 0.5); color: #66ccff; }
-  .ks-btn { background: rgba(255, 119, 0, 0.15); border-color: rgba(255, 119, 0, 0.5); color: #ff7700; }
   html[data-theme="light"] .qq-btn { color: #0088cc; border-color: #0088cc; }
-  html[data-theme="light"] .ks-btn { color: #e65c00; border-color: #e65c00; }
 
   /* 右侧栏 */
   .right-rail{position:sticky;top:0;height:100vh;padding:22px 18px;overflow-y:auto;
@@ -547,10 +545,7 @@
             <img src="https://mms0.baidu.com/it/u=2213886760,3877274697&fm=253&app=138&f=PNG?w=500&h=500" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;">
             <span style="position:relative; z-index:1; color:var(--text); font-weight:bold; text-shadow:0 1px 3px rgba(0,0,0,0.3); font-size:1rem; letter-spacing:1px;">入群讨论</span>
           </a>
-          <a href="https://26i7h.egpgcqtxw.com/short-video/group-share?cc=share_qqms&kpf=ANDROID_PHONE&fid=4239309666&shareMethod=card&groupId=665914966&kpn=NEBULA&subBiz=MESSAGE_GROUP_SHARE&photoId=0&shareId=19151659884203&shareToken=X-7f3I14KAl7A1OZ&shareType=1&expiredTime=1792953126845&shareMode=app&inviterId=4239309666&shareObjectId=665914966" target="_blank" class="glass-soft ad-slot" style="padding:0; overflow:hidden; border:none; position:relative;">
-            <img src="https://bkimg.cdn.bcebos.com/pic/4ec2d5628535e5dde7119c0f158db0efce1b9c16c482" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0;">
-            <span style="position:relative; z-index:1; color:var(--text); font-weight:bold; text-shadow:0 1px 3px rgba(0,0,0,0.3); font-size:1rem; letter-spacing:1px;">入群讨论</span>
-          </a>
+          <div class="glass-soft ad-slot"><span class="ad-num">3</span>展示位 3</div>
           <div class="glass-soft ad-slot"><span class="ad-num">4</span>展示位 4</div>
           <div class="glass-soft ad-slot"><span class="ad-num">5</span>展示位 5</div>
           <div class="glass-soft ad-slot"><span class="ad-num">6</span>展示位 6</div>
@@ -560,7 +555,7 @@
           <h2 style="font-size:1.3rem; margin-bottom: 8px;">帖子</h2>
         </div>
 
-        <!-- ======== 修复：补全了帖子列表区域的 div ======== -->
+        <!-- ======== 帖子列表区域 ======== -->
         <div class="post-grid" id="postList">
           
           <!-- 置顶帖子：官方主页 -->
@@ -630,7 +625,7 @@
               <li><b>如何投稿：</b>请加入官方交流群（或私信站长），发送口令 <code>我要发帖</code>。</li>
               <li><b>内容要求：</b>请提供【帖子标题】、【正文内容】、【视频链接或文件下载地址（如有）】以及【您的昵称/平台来源】。</li>
               <li><b>标签选择：</b>投稿时请告知适合的标签（如：安卓、Windows、Java版、基岩版、国际版、网易版、闲聊等），以便其他用户通过搜索和筛选快速找到。</li>
-              <li><b>禁止发布：</b>严禁发布任何涉及政治敏感、色情暴力、违规私服推广、引战谩骂或未经授权的商业广告内容。</li>
+              <li><b>禁止发布：</b>严禁发布任何涉及政治敏感、色情暴力、引战谩骂或未经授权的商业广告内容。</li>
             </ul>
 
             <h2>二、 反馈与求助流程</h2>
@@ -724,9 +719,6 @@
           <div class="group-links">
             <a href="https://qun.qq.com/universal-share/share?ac=1&authKey=kzAkCbTGVDwQCCfe8N9+Y3bcOezd3xWbPC1UhcFEwTo3oMmd19Xa/I1OeFZ6czK2&busi_data=eyJncm91cENvZGUiOiIxMTA2NTY1NzgyIiwidG9rZW4iOiJYOUUyR1AxemU4ZUMzRXVuN2VQbmZPRXpmSjV6NjhscHZrNDBXV2NNdXdNaHB4TmlpbXM5MGw2WnNIekF2REhHIiwidWluIjoiMzA1MTk4OTE3MiJ9&data=6evKYAnbXoRnB0w29TJUXUyH_Z2m1Ew0zUW-yv3p-Ndroyy3dNe6DFY8-9g9SpIrxe2rtuY31F0m0g1Z579LmA&svctype=4&tempid=h5_group_info" target="_blank" class="group-btn qq-btn">
               QQ 交流群 (点击加入)
-            </a>
-            <a href="https://26i7h.egpgcqtxw.com/short-video/group-share?cc=share_qqms&kpf=ANDROID_PHONE&fid=4239309666&shareMethod=card&groupId=665914966&kpn=NEBULA&subBiz=MESSAGE_GROUP_SHARE&photoId=0&shareId=19151659884203&shareToken=X-7f3I14KAl7A1OZ&shareType=1&expiredTime=1792953126845&shareMode=app&inviterId=4239309666&shareObjectId=665914966" target="_blank" class="group-btn ks-btn">
-              快手 交流群 (点击加入)
             </a>
           </div>
           
@@ -870,7 +862,7 @@
   const backgroundList = [
     '', 
     'https://n.sinaimg.cn/sinacn18/424/w480h744/20181003/5c0d-hktxqah5036106.png',
-    'https://pic.rmb.bdstatic.com/bjh/news/441932a14d4524550adda5c75f485318.png',
+    'http://mms0.baidu.com/it/u=1200455235,3746244950&fm=253&app=138&f=JPEG?w=800&h=450',
     'https://c-ssl.dtstatic.com/uploads/item/201808/01/20180801205647_vnpyl.thumb.1000_0.jpg'
   ];
   let currentBgIndex = 0;
