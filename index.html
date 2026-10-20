@@ -186,12 +186,18 @@
   .search .icon-btn:hover{color:var(--accent);background:var(--glass-hover)}
   
   .filter-panel {
-    position: absolute; top: calc(100% + 8px); right: 0; width: 220px;
-    background: var(--glass); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--line); border-radius: 14px; padding: 16px;
-    display: none; flex-direction: column; gap: 12px; z-index: 100;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  }
+  position: absolute; top: calc(100% + 8px); right: 0; width: 220px;
+  background: #ffffff;
+  border: 1px solid var(--line); border-radius: 14px; padding: 16px;
+  display: none; flex-direction: column; gap: 12px; z-index: 100;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.18);
+  max-height: 70vh;
+  overflow-y: auto;
+}
+html[data-theme="dark"] .filter-panel {
+  background: #1a1a2e;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.55);
+}
   .filter-panel.show { display: flex; }
   .filter-title { font-size: 0.85rem; color: var(--muted); margin-bottom: 4px; font-weight: bold; }
   .filter-options { display: flex; flex-direction: column; gap: 10px; }
@@ -503,19 +509,23 @@
         </form>
         
         <div class="filter-panel" id="filterPanel">
-          <div class="filter-title">按标签筛选</div>
-          <div class="filter-options">
-            <label><input type="checkbox" class="filter-checkbox" value="官方"> 官方认证</label>
-            <label><input type="checkbox" class="filter-checkbox" value="安卓"> 安卓</label>
-            <label><input type="checkbox" class="filter-checkbox" value="Windows"> Windows</label>
-            <label><input type="checkbox" class="filter-checkbox" value="Java版"> Java版</label>
-            <label><input type="checkbox" class="filter-checkbox" value="基岩版"> 基岩版</label>
-            <label><input type="checkbox" class="filter-checkbox" value="国际版"> 国际版</label>
-            <label><input type="checkbox" class="filter-checkbox" value="网易版"> 网易版</label>
-            <label><input type="checkbox" class="filter-checkbox" value="闲聊"> 闲聊</label>
-          </div>
-        </div>
-      </div>
+  <div class="filter-title">按标签筛选</div>
+  <div class="filter-options">
+    <label><input type="checkbox" class="filter-checkbox" value="官方"> 官方认证</label>
+    <label><input type="checkbox" class="filter-checkbox" value="安卓"> 安卓</label>
+    <label><input type="checkbox" class="filter-checkbox" value="Windows"> Windows</label>
+    <label><input type="checkbox" class="filter-checkbox" value="Java版"> Java版</label>
+    <label><input type="checkbox" class="filter-checkbox" value="基岩版"> 基岩版</label>
+    <label><input type="checkbox" class="filter-checkbox" value="国际版"> 国际版</label>
+    <label><input type="checkbox" class="filter-checkbox" value="网易版"> 网易版</label>
+    <label><input type="checkbox" class="filter-checkbox" value="闲聊"> 闲聊</label>
+    <label><input type="checkbox" class="filter-checkbox" value="光影"> 光影</label>
+    <label><input type="checkbox" class="filter-checkbox" value="材质包"> 材质包</label>
+    <label><input type="checkbox" class="filter-checkbox" value="Mod"> Mod</label>
+    <label><input type="checkbox" class="filter-checkbox" value="下载源"> 下载源</label>
+    <label><input type="checkbox" class="filter-checkbox" value="世界"> 世界</label>
+  </div>
+</div>
 
       <div class="top-actions">
         <button class="glass-pill icon-btn" id="bgToggle" title="切换背景图">🖼️</button>
@@ -596,26 +606,27 @@
             </div>
           </article>
 
-          <!-- 新帖子：PCL 停止下载 -->
-          <article class="glass-soft post-card" data-title="悲报！市面上公开的MC第三方启动器停止支持 MC 本体下载！" data-content="市面上公开的MC第三方启动器停止支持 MC 本体下载！PCL2 官方确认不再提供 MC 下载功能，旧版需冻结更新；HMCL、x-minecraft-launcher 等仍可下载。" data-tags="安卓,Windows,Java版,国际版,闲聊" onclick="go('article-pcl')">
-            <div class="post-cover cat-video">📜</div>
-            <div class="post-body">
-              <div class="post-byline">
-                <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
-                muffin <span class="official-badge">官方</span> · 2026.10.20
-              </div>
-              <a class="post-title" href="javascript:void(0)" onclick="event.stopPropagation(); go('article-pcl')">悲报！市面上公开的MC第三方启动器停止支持 MC 本体下载！</a>
-              <p class="post-excerpt">市面上公开的MC第三方启动器停止支持 MC 本体下载！</p>
-              <div style="display:flex;gap:6px;flex-wrap:wrap">
-                <span class="cat-tag">安卓</span>
-                <span class="cat-tag">Windows</span>
-                <span class="cat-tag">Java版</span>
-                <span class="cat-tag">基岩版</span>
-                <span class="cat-tag">国际版</span>
-                <span class="cat-tag">闲聊</span>
-              </div>
-            </div>
-          </article>
+          <!-- PCL 停止下载 -->
+<article class="glass-soft post-card" data-title="悲报！市面上公开的MC第三方启动器停止支持 MC 本体下载！" data-content="市面上公开的MC第三方启动器停止支持 MC 本体下载！PCL2 官方确认不再提供 MC 下载功能，旧版需冻结更新；HMCL、x-minecraft-launcher 等仍可下载。" data-tags="官方,安卓,Windows,Java版,基岩版,国际版,闲聊" onclick="go('article-pcl')">
+  <div class="post-cover cat-video">📜</div>
+  <div class="post-body">
+    <div class="post-byline">
+      <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+      muffin <span class="official-badge">官方</span> · 2026.10.20
+    </div>
+    <a class="post-title" href="javascript:void(0)" onclick="event.stopPropagation(); go('article-pcl')">悲报！市面上公开的MC第三方启动器停止支持 MC 本体下载！</a>
+    <p class="post-excerpt">市面上公开的MC第三方启动器停止支持 MC 本体下载！</p>
+    <div style="display:flex;gap:6px;flex-wrap:wrap">
+      <span class="cat-tag">官方</span>
+      <span class="cat-tag">安卓</span>
+      <span class="cat-tag">Windows</span>
+      <span class="cat-tag">Java版</span>
+      <span class="cat-tag">基岩版</span>
+      <span class="cat-tag">国际版</span>
+      <span class="cat-tag">闲聊</span>
+    </div>
+  </div>
+</article>
         </div>
 
         <!-- 搜索无结果提示 -->
