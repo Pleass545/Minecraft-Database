@@ -324,7 +324,7 @@
   .article-content li { margin-bottom: 8px; }
 
   /* 远程协助 */
-  .service-card{padding:28px;max-width:660px}
+  .service-card{padding:28px;max-width:660px;margin-bottom:24px;}
   .service-card h2{font-size:1.4rem;margin-bottom:12px}
   .service-card p{color:var(--muted);font-size:.92rem;margin-bottom:16px}
   .checklist{list-style:none;display:flex;flex-direction:column;gap:10px;margin-bottom:22px}
@@ -571,7 +571,7 @@
         <!-- ======== 帖子列表区域 ======== -->
         <div class="post-grid" id="postList">
           
-          <!-- 置顶帖子：官方主页 -->
+          <!-- 第一个置顶：国际版官网主页 -->
           <article class="glass-soft post-card" data-title="欢迎来到 Minecraft 官方网站" data-content="Minecraft 国际服官方网站 muffin提示：挂梯子效果更佳！" data-tags="官方,安卓,Windows,Java版,基岩版,国际版" onclick="window.open('https://www.minecraft.net/', '_blank')">
             <div class="post-cover" style="background-image: url('https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Global-Header_Image-Tile_MC-Java-Bedrock_570x321.jpg'); background-size: cover; background-position: center;"></div>
             <div class="post-body">
@@ -591,6 +591,49 @@
               </div>
             </div>
           </article>
+
+          <!-- 第二个置顶：网易版官网 -->
+          <article class="glass-soft post-card" data-title="《我的世界》官网-全新视界 探索无限" data-content="《我的世界》官网-全新视界 探索无限 中国网易" data-tags="官方,安卓,Windows,Java版,基岩版,网易版" onclick="window.open('https://mc.163.com/m/', '_blank')">
+            <div class="post-cover" style="background-image: url('https://mc.res.netease.com/pc/gw/20250701153242/img/img1_bcd004c0.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="post-body">
+              <div class="post-byline">
+                <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/07/24/16/BMjAyNjA3MjQxNjQ0NDBfODgwMDkzMzYxXzJfaGQyMDZfNDM5_s.jpg" alt="avatar">
+                我的世界 <span class="official-badge">官方</span> · 2026.10.21
+              </div>
+              <a class="post-title" href="https://mc.163.com/m/" target="_blank" onclick="event.stopPropagation()">《我的世界》官网-全新视界 探索无限</a>
+              <p class="post-excerpt">《我的世界》官网-全新视界 探索无限 中国网易</p>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="cat-tag">官方</span>
+                <span class="cat-tag">安卓</span>
+                <span class="cat-tag">Windows</span>
+                <span class="cat-tag">Java版</span>
+                <span class="cat-tag">基岩版</span>
+                <span class="cat-tag">网易版</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- 第三个帖子：正版购买保姆级教程 -->
+          <article class="glass-soft post-card" data-title="我的世界国际版正版购买下载防盗号保姆级教程" data-content="我的世界国际版正版购买下载防盗号保姆级教程 B站整合" data-tags="官方,安卓,Windows,Java版,基岩版,国际版" onclick="go('article-official-buy')">
+            <div class="post-cover" style="background-image: url('https://www.minecraft.net/content/dam/minecraftnet/games/minecraft/key-art/Homepage_Discover-our-games_MC-Vanilla-KeyArt_864x864.jpg'); background-size: cover; background-position: center;"></div>
+            <div class="post-body">
+              <div class="post-byline">
+                <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+                muffin <span class="official-badge">官方</span> · 2026.10.21
+              </div>
+              <a class="post-title" href="javascript:void(0)" onclick="event.stopPropagation(); go('article-official-buy')">我的世界国际版正版购买下载防盗号保姆级教程</a>
+              <p class="post-excerpt">我的世界国际版正版购买下载防盗号保姆级教程 B站整合</p>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="cat-tag">官方</span>
+                <span class="cat-tag">安卓</span>
+                <span class="cat-tag">Windows</span>
+                <span class="cat-tag">Java版</span>
+                <span class="cat-tag">基岩版</span>
+                <span class="cat-tag">国际版</span>
+              </div>
+            </div>
+          </article>
+
          <!-- FCL下载教程含MG渲染器 -->
         <article class="glass-soft post-card" data-title="FCL官方正版下载地址" data-content="FCL官方下载，教你在手机上玩Java版，含MG渲染器与MG管理器教程。" data-tags="官方,安卓,Java版,国际版" onclick="go('fcl-download')">
   <div class="post-cover" style="background-image: url('https://t14.baidu.com/it/u=854816439,1029789044&fm=225&app=113&f=JPEG?w=2560&h=1440&s=6DF5A6461C6B1C8C1422C26A0300F07B'); background-size: cover; background-position: center;"></div>
@@ -609,6 +652,26 @@
     </div>
   </div>
 </article>
+
+          <!-- ZL2 启动器下载 -->
+          <article class="glass-soft post-card" data-title="ZL2启动器正版下载！" data-content="ZL2启动器正版下载！教你在手机上玩Java版，含MG渲染器与MG管理器教程。" data-tags="官方,安卓,Java版,国际版" onclick="go('article-zl2')">
+            <div class="post-cover cat-download" style="font-size:1.1rem;font-weight:700;letter-spacing:1px;opacity:1;">ZL2 官方下载</div>
+            <div class="post-body">
+              <div class="post-byline">
+                <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+                muffin <span class="official-badge">官方</span> · 2026.10.21
+              </div>
+              <a class="post-title" href="javascript:void(0)" onclick="event.stopPropagation(); go('article-zl2')">ZL2启动器正版下载！</a>
+              <p class="post-excerpt">ZL2启动器正版下载！</p>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="cat-tag">官方</span>
+                <span class="cat-tag">安卓</span>
+                <span class="cat-tag">Java版</span>
+                <span class="cat-tag">国际版</span>
+              </div>
+            </div>
+          </article>
+
           <!-- 站规帖子 -->
           <article class="glass-soft post-card" data-title="全站发帖与社区管理规范" data-content="包含发帖格式规范、反馈流程、官方声明、免责声明以及版权说明。" data-tags="官方,闲聊" onclick="go('article-statement')">
             <div class="post-cover cat-notice">📜</div>
@@ -641,6 +704,23 @@
                 <span class="cat-tag">Windows</span>
                 <span class="cat-tag">Java版</span>
                 <span class="cat-tag">国际版</span>
+                <span class="cat-tag">闲聊</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- muffin 对我的世界看法 -->
+          <article class="glass-soft post-card" data-title="muffin对我的世界看法" data-content="muffin对我的世界看法 —— 聊聊第三方启动器下载关闭、网易取消绿宝石模组，以及社区的现状。" data-tags="官方,闲聊" onclick="go('article-muffin-thoughts')">
+            <div class="post-cover cat-video">💭</div>
+            <div class="post-body">
+              <div class="post-byline">
+                <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+                muffin <span class="official-badge">官方</span> · 2026.10.21
+              </div>
+              <a class="post-title" href="javascript:void(0)" onclick="event.stopPropagation(); go('article-muffin-thoughts')">muffin对我的世界看法</a>
+              <p class="post-excerpt">muffin对我的世界看法</p>
+              <div style="display:flex;gap:6px;flex-wrap:wrap">
+                <span class="cat-tag">官方</span>
                 <span class="cat-tag">闲聊</span>
               </div>
             </div>
@@ -822,8 +902,165 @@
         </div>
       </section>
 
+      <!-- ===== 帖子详情页：ZL2 启动器正版下载 ===== -->
+      <section class="page" id="page-article-zl2">
+        <div class="glass doc" style="max-width: 800px; margin: 0 auto;">
+          <div class="article-header">
+            <h1>ZL2启动器正版下载！</h1>
+            <div class="post-byline" style="justify-content: center;">
+              <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+              muffin <span class="official-badge">官方</span> · 发布于 2026.10.21
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+              <span class="cat-tag">官方</span>
+              <span class="cat-tag">安卓</span>
+              <span class="cat-tag">Java版</span>
+              <span class="cat-tag">国际版</span>
+            </div>
+          </div>
+
+          <div class="article-content">
+            <p>大家好，这里是Muffin，今天教大家下载ZL2。让你在手机上玩Java版。</p>
+
+            <h2>ZL2 启动器下载</h2>
+            <p>首先，这里非常感谢B站作者WZW_王宗王的保姆级教程。在你下载ZL2启动器时务必观看。</p>
+            <p>视频链接：<a href="https://b23.tv/Sx7ts3C" target="_blank" rel="noopener noreferrer">https://b23.tv/Sx7ts3C</a></p>
+            <p>ZL2是一款开源软件。</p>
+            <p>开源主页：<a href="https://github.com/ZalithLauncher/ZalithLauncher2" target="_blank" rel="noopener noreferrer">https://github.com/ZalithLauncher/ZalithLauncher2</a></p>
+            <p>开源主页下滑找到“Releases”，点击下面绿色的“Latest”，下滑即可下载最新版。</p>
+            <p><b>请注意自己的手机架构，不要下载错误！！！</b></p>
+
+            <h2>关于 MG 渲染器</h2>
+            <p>MG渲染器是一款开源软件。</p>
+            <p>开源主页：<a href="https://github.com/MobileGL-Dev/MobileGlues-release" target="_blank" rel="noopener noreferrer">https://github.com/MobileGL-Dev/MobileGlues-release</a></p>
+            <p>开源主页下滑找到“Releases”，点击下面绿色的“Latest”，下滑即可下载最新版。</p>
+
+            <h2>MG 管理器相关教程</h2>
+            <p>这里非常感谢B站作者MCleader_以及创作团队的保姆级教程。在你下载时务必观看。</p>
+            <p>视频链接：<a href="https://b23.tv/Af2sYF1" target="_blank" rel="noopener noreferrer">https://b23.tv/Af2sYF1</a></p>
+            <p>视频制作不易，请支持B站原作者给相关视频链接的原作者送上免费的三连+关注，muffin在这里感谢各位以及视频作者和开源作者以及感谢开源社区。</p>
+
+            <h2>还是不会？</h2>
+            <p>试一下免费免登录的AI网站询问AI吧。</p>
+            <p>智谱清言：<a href="https://chatglm.cn" target="_blank" rel="noopener noreferrer">chatglm.cn</a></p>
+            <p>Kimi：<a href="https://www.kimi.com" target="_blank" rel="noopener noreferrer">www.kimi.com</a></p>
+            <p>学不会？不想问？太麻烦？一键解决！<a href="javascript:void(0)" onclick="go('service')" style="color:var(--accent);font-weight:600;">点击这里进入</a></p>
+
+            <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--line); display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+              <button class="glass-pill btn btn-ghost" onclick="go('home')">返回首页</button>
+              <button class="glass-pill btn btn-primary" onclick="go('group')">加入官方交流群</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 帖子详情页：正版购买保姆级教程 ===== -->
+      <section class="page" id="page-article-official-buy">
+        <div class="glass doc" style="max-width: 800px; margin: 0 auto;">
+          <div class="article-header">
+            <h1>我的世界国际版正版购买下载防盗号保姆级教程</h1>
+            <div class="post-byline" style="justify-content: center;">
+              <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+              muffin <span class="official-badge">官方</span> · 发布于 2026.10.21
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+              <span class="cat-tag">官方</span>
+              <span class="cat-tag">安卓</span>
+              <span class="cat-tag">Windows</span>
+              <span class="cat-tag">Java版</span>
+              <span class="cat-tag">基岩版</span>
+              <span class="cat-tag">国际版</span>
+            </div>
+          </div>
+
+          <div class="article-content">
+            <p>Hello，大家好，我是muffin。今天教大家怎么下载我的世界国际版正版下载教程。</p>
+            
+            <h2>Windows 购买与下载</h2>
+            <p>这个是电脑版下载教程、包含购买、下载第三方启动器，以及皮肤和披风的导入。</p>
+            <p>这里感谢B站up主Zethos的保姆级购买和下载教程，视频制作不易，请多多三连+关注，支持原作者。</p>
+            <p>视频链接：<a href="https://b23.tv/zrPyCOo" target="_blank" rel="noopener noreferrer">https://b23.tv/zrPyCOo</a></p>
+            <p>注意，这个是电脑版的下载教程。如果你想在手机上体验正版，那不妨可以下载FCL、ZL2进行登录，这样手机就可以玩Java版，并且享受到正版账户！</p>
+            <p>如果你遇到网络不稳定的情况，请切换网络。</p>
+            <p>MC正版国际版对中国大陆进行了锁区，如果上述教程对你没有帮助。我提供了第二个教程。</p>
+            <p>这里感谢B站up主曼波432制作的教程视频。视频制作不易，请多多三连+关注，支持原作者。</p>
+            <p>视频链接：<a href="https://b23.tv/qtgLtfx" target="_blank" rel="noopener noreferrer">https://b23.tv/qtgLtfx</a></p>
+
+            <h2>防盗号教程</h2>
+            <p>这里感谢B站up主芒果方块制作的教程视频。视频制作不易，请多多三连+关注，支持原作者。</p>
+            <p>视频链接：<a href="https://b23.tv/rIlMV5B" target="_blank" rel="noopener noreferrer">https://b23.tv/rIlMV5B</a></p>
+            <p>如果你嫌上面的视频不够细，那么还有另外一款优质教程。</p>
+            <p>这里感谢B站up主灭天神话_666制作的教程视频。视频制作不易，请多多三连+关注，支持原作者。</p>
+            <p>视频链接：<a href="https://b23.tv/CV0mbSn" target="_blank" rel="noopener noreferrer">https://b23.tv/CV0mbSn</a></p>
+
+            <h2>防封号教程</h2>
+            <p>众所周知，我的世界国际版更新了一项非常鸡肋的功能，他有可能会乱封你的账号！详细请看B站UP主黑纹白斑马的视频，视频可能搬运自油管，详细请看作者简介。</p>
+            <p>视频链接：<a href="https://b23.tv/NyJoWw5" target="_blank" rel="noopener noreferrer">https://b23.tv/NyJoWw5</a></p>
+            <p>怎么防止被举报呢？</p>
+            <p>你可以尝试添加模组，或者游玩老版本服务器。</p>
+            <p>详细可以看B站的这个视频。</p>
+            <p>视频链接：<a href="https://b23.tv/tyjVfyx" target="_blank" rel="noopener noreferrer">https://b23.tv/tyjVfyx</a></p>
+
+            <h2>还是学不会？</h2>
+            <p>好了，以上就是整个正版购买流程的保姆级教程，如果您还是学不会，您可以向AI咨询。切记不能暴露密码！</p>
+            <p>或者 <a href="javascript:void(0)" onclick="go('service')" style="color:var(--accent);font-weight:600;">点击此处！3块钱帮您搞定一切！</a>（注意：购买游戏的钱需要您自己出！注意，在远程协助的过程中muffin不会向你索要任何的密码之类的敏感信息！）</p>
+
+            <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--line); display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+              <button class="glass-pill btn btn-ghost" onclick="go('home')">返回首页</button>
+              <button class="glass-pill btn btn-primary" onclick="go('group')">加入官方交流群</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== 帖子详情页：muffin 对我的世界看法 ===== -->
+      <section class="page" id="page-article-muffin-thoughts">
+        <div class="glass doc" style="max-width: 820px; margin: 0 auto;">
+          <div class="article-header">
+            <h1>muffin对我的世界看法</h1>
+            <div class="post-byline" style="justify-content: center;">
+              <img class="avatar" src="http://p4.a.yximgs.com/uhead/AB/2026/10/02/20/BMjAyNjEwMDIyMDQzMzFfNDIzOTMwOTY2Nl8yX2hkMTkxXzE1MQ==_s.jpg" alt="avatar">
+              muffin <span class="official-badge">官方</span> · 发布于 2026.10.21
+            </div>
+            <div style="display:flex;gap:6px;justify-content:center;margin-top:12px;flex-wrap:wrap;">
+              <span class="cat-tag">官方</span>
+              <span class="cat-tag">闲聊</span>
+            </div>
+          </div>
+
+          <div class="article-content">
+            <p>讲真的，以目前来看（2026.10.21）我的世界的社区简直烂透了，来总结一下最近我的世界社区发生的各种事情。</p>
+
+            <h2>1. PCL2、HMCL、ZL2 等第三方启动器无法下载我的世界？</h2>
+            <p>在 2026 年 10 月 20 日龙腾猫跃发布了 PCL 更新，并附上了一句：</p>
+            <p><b>“为遵守相关法律法规，PCL 暂不提供 MC 的下载功能”</b></p>
+            <p>后面证实了这件事情与麻将、网易微软无关。并且龙腾猫跃还发了一句：“中国式家长很神奇吧。”</p>
+            <p>现在网传可信度最高的说法是：一个小孩在我的世界私服里充钱，家长讨要无果。并举报了那个私服服务器，顺手把 PCL 一起举报了。现在搞的第三方启动器全都无法正常下载。不过这件事情没有得到证实，一切结果等待官方通报。</p>
+            <p>muffin 会在站点里提供解决方案（主要是发帖），并且会在群里提供 MC 的下载本体的。只不过 muffin 可能没有时间。发的时间应该会慢些。</p>
+            <p>只能说中国的保胎技术还是太强了。</p>
+
+            <h2>2. 我的世界中国版（网易版）取消绿宝石模组</h2>
+            <p>网易在 2026 年 10 月 8 日和 14 日连发两份公告，给绿宝石模组判了死缓：11 月起不再新增，现有模组在 11 月 8 日前由开发者“自愿”二选一——要么改成钻石定价，要么下架。注意，没有“改成免费”这个选项，官方把路修得笔直，一条通往充值，一条通往消失。</p>
+            <p>补偿呢？全服送 10000 绿宝石。听着挺唬人，但你细品：平台先宣布你手里的货币即将失去核心用途，再大发慈悲塞给你一堆同一款货币，催你在 11 月 8 日前花掉。这不叫补偿，这叫清仓大甩卖之前往你手里塞代金券，还贴心地帮你把店门焊死了。玩家原话比我损：“因为游戏货币没用了，所以把货币换成 RMB 货币，然后送你一万没用的游戏货币”。断头饭还讲究个吃饱上路，网易这波是让你自己掏钱买棺材板。</p>
+            <p>说白了，陪伴了九年的绿宝石免费模组生态，被一张“限时调整”的通知单轻飘飘地送走了。官方嘴里是“简化流程、提升体验”，落到玩家头上就是：白嫖时代结束，请开始习惯钻石。讽刺的是，他们还管这叫福利。</p>
+            <p>这使得大量 MC 玩家转向迷你世界，迷你世界还顺手发了个嘲讽视频！这谁绷得住？</p>
+            <p>现在 AI 这么发达，到时候希望有人使用 AI，把 Java 版的模组搬到网易上面，并且价格设定成免费。如果能这么做的话，或许我可以🤓</p>
+
+            <h2>3. 最后说件事情</h2>
+            <p>如果你看不懂教程，不懂得魔法无法访问外网。那么可以寻找我的帮助，只需要 8.9 元即可！</p>
+            <p>需要发帖和反馈，也可以加入我的 QQ 群，这里感谢大家的支持！</p>
+
+            <div style="margin-top:28px; padding-top:20px; border-top:1px solid var(--line); display:flex; gap:12px; flex-wrap:wrap; justify-content:center;">
+              <button class="glass-pill btn btn-ghost" onclick="go('home')">返回首页</button>
+              <button class="glass-pill btn btn-primary" onclick="go('group')">加入官方交流群</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ===== 远程安装协助 ===== -->
       <section class="page" id="page-service">
+        <!-- 原有的远程协助卡片 -->
         <div class="glass service-card">
           <h2>远程安装协助</h2>
           <p>教程看不懂、卡在某一步，我通过远程控制帮你装好、配置好。</p>
@@ -840,6 +1077,26 @@
           </div>
           <p style="font-size:.78rem;color:var(--muted);margin-bottom:0">
             下单前请确认你已同意远程操作并自行备份重要数据。
+          </p>
+        </div>
+
+        <!-- 正版游戏购买指导卡片 -->
+        <div class="glass service-card">
+          <h2>正版游戏购买指导</h2>
+          <p>想在官网购买正版，但苦于没有外币卡、打不开网页或不懂流程？我来帮你搞定。</p>
+          <ul class="checklist">
+            <li>指导注册微软账号（Microsoft Account）</li>
+            <li>解决官网无法访问、支付报错等问题</li>
+            <li>提供正规渠道购买方案（拒绝黑卡）</li>
+            <li>协助完成购买并验证正版授权</li>
+            <li>售后保障：确保你能正常登录正版</li>
+          </ul>
+          <div class="price-row">
+            <div class="price">¥3.0 <span>/ 次</span></div>
+            <button class="glass-pill btn btn-primary" id="btnBuyGuide">联系我指导</button>
+          </div>
+          <p style="font-size:.78rem;color:var(--muted);margin-bottom:0">
+            此费用仅为指导与协助操作的人工劳务费，游戏本体费用需您自行支付给微软官方。
           </p>
         </div>
       </section>
@@ -987,8 +1244,12 @@
 
   const fab = document.getElementById('fab');
   if (fab) fab.addEventListener('click', () => go('publish')); 
+  
   const btnOrder = document.getElementById('btnOrder');
   if (btnOrder) btnOrder.addEventListener('click', () => go('order'));
+
+  const btnBuyGuide = document.getElementById('btnBuyGuide');
+  if (btnBuyGuide) btnBuyGuide.addEventListener('click', () => go('order'));
 
   // ===== 3. 轮播图 =====
   const slides = document.querySelectorAll('.carousel-slide');
