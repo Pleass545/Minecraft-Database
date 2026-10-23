@@ -1,0 +1,5 @@
+这是一个伪后端的功能，它可以修改静态网页中的一些功能
+需要go环境来进行编译使用，修改前记得把index.html放在同级目录。
+
+This is a pseudo-backend feature that can modify some functions in static web pages.
+It requires a Go environment for compilation and use. Before making modifications, remember to place index.html in the same directory.
